@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1.5rem;
+        }
+        nav .menu {
+            display: none;
+        }
+        nav select {
+            display: none;
+        }
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .content div {
+            max-width: 500px;
+            padding: 1rem;
+        }
+        section {
+            padding: 2rem;
+        }
+        @media (max-width: 768px) {
+            nav .menu {
+                display: block;
+            }
+            nav .links {
+                display: none;
+            }
+            nav select {
+                display: block;
+                width: 100%;
+                padding: 0.5rem;
+                font-size: 1rem;
+                background: #333;
+                color: #fff;
+                border: none;
+            }
+            nav select option {
+                background: #fff;
+                color: #333;
+            }
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .content img {
+                max-width: 80%;
+            }
+            .content div {
+                padding: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <select class="menu" onchange="window.location.href=this.value;">
+                <option value="#home">Home</option>
+                <option value="#education">Education</option>
+                <option value="#skills">Skills</option>
+                <option value="#projects">Projects</option>
+                <option value="#contact">Contact</option>
+            </select>
+        </nav>
+    </header>
+
+    <section id="home" class="content">
+        <img src="https://via.placeholder.com/300" alt="Home Image">
+        <div>
+            <h2>Home</h2>
+            <p>Welcome to my portfolio! Here you'll find information about my education, skills, projects, and contact details.</p>
+        </div>
+    </section>
+
+    <section id="education" class="content">
+        <img src="https://via.placeholder.com/300" alt="Education Image">
+        <div>
+            <h2>Education</h2>
+            <p>Here is a brief overview of my educational background. I have studied at various institutions to gain the skills necessary for my career.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="content">
+        <img src="https://via.placeholder.com/300" alt="Skills Image">
+        <div>
+            <h2>Skills</h2>
+            <p>These are the skills I have acquired over the years, including technical skills, soft skills, and any other relevant abilities.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="content">
+        <img src="https://via.placeholder.com/300" alt="Projects Image">
+        <div>
+            <h2>Projects</h2>
+            <p>Check out some of the projects I have worked on. Each project showcases different skills and aspects of my work.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="content">
+        <img src="https://via.placeholder.com/300" alt="Contact Image">
+        <div>
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me through the contact information provided. I am always open to discussing new opportunities.</p>
+        </div>
+    </section>
+</body>
+</html>
